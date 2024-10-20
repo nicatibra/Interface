@@ -25,27 +25,32 @@ namespace Interface
                 Group groupA = new Group("Group A");
                 Group groupB = new Group("Group B");
 
+                //AddStudent() method usage:
                 groupA.AddStudent(student1);
                 groupA.AddStudent(new Student("Azad", "Ashurov"));
                 groupA.AddStudent(new Student("Ismayil", "Memmedli"));
                 groupA.AddStudent(new Student("Ayxan", "Huseynov"));
-
-
 
                 groupB.AddStudent(new Student("Sabir", "Quliyev"));
                 groupB.AddStudent(new Student("Emil", "Abdullayev"));
                 groupB.AddStudent(new Student("Ryan", "Gosling"));
                 groupB.AddStudent(new Student("Tony", "Stark"));
 
-
+                Console.WriteLine("ShowStudents() Method for group A: ");
                 groupA.ShowStudents();
+
+                Console.WriteLine("\nShowStudents() Method for group B:");
                 groupB.ShowStudents();
 
                 Console.WriteLine("-----------------------------------------------------------------------------");
 
                 //Shows GroupName, GroupCount, GroupID
+                Console.WriteLine("GetGroupInfo() Method for group A:");
                 groupA.GetGroupInfo();
+                Console.WriteLine("\nGetGroupInfo() Method for group B:");
                 groupB.GetGroupInfo();
+
+                Console.WriteLine("\nSearch() Method:");
 
                 Student retrievedStudent = groupA.GetStudent(1);
 
@@ -63,11 +68,11 @@ namespace Interface
                 groupA.ShowStudents();
 
                 Console.WriteLine("-----------------------------------------------------------------------------");
-
+                Console.WriteLine("ShowAllGroups() Method: ");
                 Group.ShowAllGroups();
 
                 Console.WriteLine("-----------------------------------------------------------------------------");
-
+                Console.WriteLine("Adding groups: ");
                 Group.AddGroup(groupA);
                 Group.AddGroup(groupB);
 
